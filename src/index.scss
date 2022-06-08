@@ -1,0 +1,25 @@
+@use './App.scss' as s;
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Caudex', serif;
+	/*font-size: 62.5%;*/
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: s.$primary-color;
+	//background: #7bbbf7;
+	/*background: #badfff;*/
+	//font-family: 'Caudex', serif;
+	//font: 300 11px/1.4 'Caudex', serif;
+	/*overflow: hidden;*/
+	/*display: block;*/
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,133 @@
+@use '../../App.scss' as s;
+header {
+	transition: all 233ms ease-in-out;
+	width: 100%;
+	position: absolute;
+	top: -100px;
+	z-index: 99;
+	//border: solid 1px red;
+	//display: flex;
+	//justify-content: space-between;
+	//align-items: center;
+}
+
+.nav-bar {
+	background: s.$secondary-color;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	//padding: 0 12%;
+
+	border-radius: 8px;
+	border: 2px solid s.$accent-color;
+	outline: solid 4px s.$grey-color;
+
+	left: 2vw;
+	right: 2vw;
+	width: 92vw;
+	height: 68px;
+	padding: 0px 8px;
+	margin: 0 auto;
+	margin-top: 16px;
+
+	font-size: 20px;
+
+	.home--link {
+		color: s.$primdark-color;
+		text-decoration: none;
+		font-weight: 900;
+		letter-spacing: 2px;
+		&:hover {
+			text-decoration: dotted overline 7px #3363b0;
+		}
+	}
+	nav {
+		//border: solid 1px rgb(0, 0, 0);
+		//text-align: left;
+		//margin-left: auto;
+		//display: block;
+		display: flex;
+		justify-content: space-between;
+		//width: 40%;
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: flex-end;
+			//margin-left: -30px;
+			@media screen and (max-width: 480px) {
+				font-size: 18px;
+			}
+			li {
+				list-style: none;
+				margin: 0 2px;
+				a {
+					color: #000000;
+					text-decoration: none;
+					transition: all 1.9 ease-out;
+
+					&:hover {
+						text-decoration: solid overline 7px s.$accent-color;
+					}
+				}
+				&.btn {
+					a {
+						background: #181870;
+						color: #ffffff;
+						//font-size: larger;
+						padding: 10px 24px;
+						border-radius: 8px;
+						margin-right: -16px;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+.booking--li {
+	background-color: s.$primdark-color;
+	padding: 4px 7px;
+	//font-size: smaller;
+	color: #fff;
+	border-radius: 7px;
+}
+.contact--li {
+	background-color: s.$grey-color;
+	padding: 4px 7px;
+	//font-size: medium;
+	border-radius: 7px;
+}
+
+.language--li {
+	color: #000000;
+	position: absolute;
+	z-index: 88;
+	float: left;
+	left: 8vw;
+	//display: inline-block;
+	//position: absolute;
+	//right: 0;
+	//top: 0;
+	//flex-direction: column;
+}
+
+.language {
+	//width: 1.8rem;
+	padding: 4px;
+	//padding-bottom: 6px;
+	margin-left: 2px;
+	border-radius: 4px;
+}
+.us {
+	//color: #fff;
+	//background-color: #f31717a4;
+}
+.de {
+	//color: rgb(255, 173, 20);
+	//background-color: #00000093;
+}
+.fr {
+	//color: rgb(255, 255, 255);
+	//background-color: #001aff88;
+}

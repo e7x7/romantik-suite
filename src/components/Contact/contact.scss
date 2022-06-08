@@ -1,0 +1,148 @@
+@use '../../App.scss' as s;
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(40%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.contact-container {
+	.ctext-zone {
+		z-index: 55;
+		background-color: s.$secondary-color;
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+		//width: 70%;
+		min-width: 16rem;
+		max-width: 50%;
+		padding: 8px 16px;
+		margin: 0 auto;
+		margin-top: 112px;
+
+		border: 4px solid s.$accent-color;
+		outline: 12px double s.$grey-color;
+		border-radius: 8px;
+		h2 {
+			color: s.$primdark-color;
+			font-size: 1.8rem;
+			margin-bottom: -8px;
+		}
+		p:first-of-type {
+			margin-bottom: -8px;
+		}
+	}
+}
+.ctext-text {
+	padding-left: 8px;
+}
+.contact-form {
+	width: 100%;
+	margin-top: -16px;
+
+	ul {
+		padding: 4px 8px;
+		margin: 0;
+		li {
+			overflow: hidden;
+			display: block;
+			position: relative;
+			//border: 2px solid red;
+			opacity: 0;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 4px;
+			list-style: none;
+			animation: fadeIn 1.8s 0.2s;
+			animation-fill-mode: forwards;
+			input {
+				//max-width: 16rem;
+			}
+			input,
+			textarea {
+				border-radius: 4px;
+
+				font-family: 'Caudex', serif;
+				background-color: s.$grey-color;
+				padding: 4px;
+				width: 100%;
+			}
+			textarea {
+				//outline: none;
+				//min-width: 100%;
+				//width: 98%;
+				max-width: 100%;
+				height: 7rem;
+				//padding: 4px;
+				font-size: 14px;
+			}
+		}
+		.flat-btn {
+			font-weight: 900;
+			padding: 8px 8px;
+			letter-spacing: 2px;
+			cursor: cell;
+			&:hover,
+			&:focus {
+				background-color: #fff;
+				//background-color: s.$primary-color;
+			}
+		}
+	}
+}
+
+.info-map {
+	z-index: 999;
+	background-color: #fff;
+	position: relative;
+	//top: 50px;
+	font-size: 1.2rem;
+	//right: 5%;
+	margin-top: 32px;
+	margin-left: 10vw;
+	width: 260px;
+	padding: 16px;
+	padding-top: 8px;
+	outline: 2px solid s.$grey-color;
+	opacity: 0;
+	animation: fadeIn 1s 1.5s;
+	animation-fill-mode: forwards;
+	span {
+		font-size: 14px;
+		display: block;
+		padding-top: 10px;
+	}
+}
+
+.map-wrap {
+	width: 88%;
+	height: 54vh;
+	margin: 0 auto;
+	margin-bottom: 24px;
+	margin-top: -8px;
+	//float: right;
+	outline: 8px solid s.$grey-color;
+	border-radius: 7px;
+	border: 4px solid s.$secondary-color;
+}
+.leaflet-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	//opacity: 0;
+	//animation: backInRight 2s 1.2s;
+	//animation-fill-mode: forwards;
+}
+.map-arrow {
+	font-size: larger;
+}
+
+//.email--span {
+//	//font-size: small;
+//}

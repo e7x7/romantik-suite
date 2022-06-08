@@ -1,0 +1,21 @@
+$primary-color: #7bbbf7;
+$primdark-color: #3363b0;
+$secondary-color: #f1ebb5;
+$accent-color: #b2e28c;
+$grey-color: #d7e2cf;
+
+//@font-face {
+//	font-family: 'Caudex', serif;
+//	src: url('./assets/fonts/Caudex-Regular.ttf') format('ttf');
+//}
+
+//@font-face {
+//	font-family: 'Caudex', serif;
+//	src: url('./assets/fonts/Caudex-Italic.ttf') format('ttf');
+//}
+
+@mixin flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
