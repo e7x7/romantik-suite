@@ -1,35 +1,12 @@
 import './navbar.scss';
-import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { T, useSetLanguage, useCurrentLanguage } from '@tolgee/react';
 
 const Navbar = () => {
-	//const body = document.body;
-	//let lastScroll = 0;
-
-	//window.addEventListener('scroll', () => {
-	//	const currentScroll = window.pageYOffset;
-	//	if (currentScroll <= 0) {
-	//		body.classList.remove('scroll-up');
-	//		return;
-	//	}
-
-	//	if (
-	//		currentScroll > lastScroll * 0.98 &&
-	//		!body.classList.contains('scroll-down')
-	//	) {
-	//		body.classList.remove('scroll-up');
-	//		body.classList.add('scroll-down');
-	//	} else if (
-	//		currentScroll < lastScroll * 1.02 &&
-	//		body.classList.contains('scroll-down')
-	//	) {
-	//		body.classList.remove('scroll-down');
-	//		body.classList.add('scroll-up');
-	//	}
-	//	lastScroll = currentScroll;
-	//});
+	const refreshPage = () => {
+		window.location.reload();
+	};
 	const setLanguage = useSetLanguage();
 	const getLanguage = useCurrentLanguage();
 	return (
@@ -39,20 +16,9 @@ const Navbar = () => {
 				transition={{ ease: 'easeOut', duration: 0.7 }}
 				className='nav-bar'
 			>
-				<Link
-					className='home--link'
-					to='/'
-					onClick={() => {
-						window.scroll({
-							top: 0,
-							left: 0,
-							behavior: 'smooth',
-						});
-					}}
-				>
-					{/*↪↩*/}
+				<a className='home--link' href='.' onClick={refreshPage}>
 					<span>🏠</span>
-				</Link>
+				</a>
 
 				<nav>
 					<ul>
@@ -100,11 +66,11 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li>
-							<NavLink to='/contact'>
+							<a href='#contact'>
 								<span className='contact--li'>
 									↠<T>nav--contact</T>
 								</span>
-							</NavLink>
+							</a>
 						</li>
 					</ul>
 				</nav>

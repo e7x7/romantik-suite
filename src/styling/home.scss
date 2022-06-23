@@ -1,4 +1,75 @@
-@use '../../App.scss' as s;
+@use '../App.scss' as s;
+
+.home-container {
+	font-size: 0.95rem;
+	margin: 0 2vw;
+}
+
+.carousel {
+	position: relative;
+	top: 88px;
+	overflow: hidden;
+	cursor: grab;
+	border-radius: 8px;
+}
+.inner-carousel {
+	display: flex;
+	cursor: grab;
+}
+.item {
+	transition: all 200ms ease-in-out;
+	min-width: 40rem;
+	max-width: 100%;
+	height: 70vh;
+	padding: 8px 4px;
+}
+.item img {
+	@include s.flex;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 7px;
+	pointer-events: none;
+	border: 2px solid s.$secondary-color;
+}
+.item:hover,
+.item:focus {
+	transform: scale(0.98);
+}
+
+.imgdiv {
+	width: 100%;
+	height: 100%;
+}
+.text {
+	@include s.flex;
+}
+
+.text-zone {
+	z-index: 55;
+	background-color: s.$secondary-color;
+	@include s.flex;
+	flex-direction: column;
+	min-width: 16rem;
+	padding: 0px 8px;
+	border: 4px solid s.$accent-color;
+	border-radius: 8px;
+}
+
+.bottom-home--link {
+	background-color: s.$secondary-color;
+	@include s.flex;
+	position: relative;
+	width: 140px;
+	bottom: 8px;
+	float: right;
+	margin-right: 16px;
+	padding: 8px;
+	color: black;
+	font-size: 1.4rem;
+	border-radius: 7px;
+	border: 4px solid s.$accent-color;
+}
 
 @keyframes fadeIn {
 	0% {
@@ -18,8 +89,6 @@
 		background-color: s.$secondary-color;
 		display: flex;
 		flex-direction: column;
-		//align-items: center;
-		//width: 70%;
 		min-width: 16rem;
 		max-width: 50%;
 		padding: 8px 16px;
@@ -53,7 +122,6 @@
 			overflow: hidden;
 			display: block;
 			position: relative;
-			//border: 2px solid red;
 			opacity: 0;
 			padding: 0;
 			margin: 0;
@@ -61,9 +129,7 @@
 			list-style: none;
 			animation: fadeIn 1.8s 0.2s;
 			animation-fill-mode: forwards;
-			input {
-				//max-width: 16rem;
-			}
+
 			input,
 			textarea {
 				border-radius: 4px;
@@ -74,12 +140,8 @@
 				width: 100%;
 			}
 			textarea {
-				//outline: none;
-				//min-width: 100%;
-				//width: 98%;
 				max-width: 100%;
 				height: 7rem;
-				//padding: 4px;
 				font-size: 14px;
 			}
 		}
@@ -91,7 +153,6 @@
 			&:hover,
 			&:focus {
 				background-color: #fff;
-				//background-color: s.$primary-color;
 			}
 		}
 	}
@@ -101,22 +162,18 @@
 	z-index: 999;
 	background-color: #fff;
 	position: relative;
-	//top: 50px;
 	font-size: 1.2rem;
-	//right: 5%;
 	margin-top: 32px;
-	margin-left: 10vw;
-	width: 260px;
+	margin-left: 8vw;
+	width: 240px;
 	padding: 16px;
 	padding-top: 8px;
-	outline: 2px solid s.$grey-color;
-	opacity: 0;
+	outline: 4px solid s.$grey-color;
 	animation: fadeIn 1s 1.5s;
 	animation-fill-mode: forwards;
 	span {
-		font-size: 14px;
 		display: block;
-		padding-top: 10px;
+		padding-top: 16px;
 	}
 }
 
@@ -126,7 +183,6 @@
 	margin: 0 auto;
 	margin-bottom: 24px;
 	margin-top: -8px;
-	//float: right;
 	outline: 8px solid s.$grey-color;
 	border-radius: 7px;
 	border: 4px solid s.$secondary-color;
@@ -135,14 +191,7 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	//opacity: 0;
-	//animation: backInRight 2s 1.2s;
-	//animation-fill-mode: forwards;
 }
 .map-arrow {
 	font-size: larger;
 }
-
-//.email--span {
-//	//font-size: small;
-//}

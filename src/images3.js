@@ -18,9 +18,9 @@ import brkfast2 from './assets/images/brkfast2.jpg';
 import broetchen from './assets/images/broetchen.jpg';
 import fruechte from './assets/images/fruechte.jpg';
 import plate from './assets/images/plate.jpg';
-import terassenahe from './assets/images/terassenahe.jpg';
+import terasse from './assets/images/terasse.jpg';
 
-export default [brkfast1, brkfast2, broetchen, fruechte, plate, terassenahe];
+export default [brkfast1, brkfast2, broetchen, fruechte, plate, terasse];
 
 
 //export default [hausvorne, wohnen, zaun, garten, sitzecke, dach3, lesen, schlafen, terasse, tisch, zaunnahe, brkfast1, brkfast2, broetchen, fruechte, plate, terassenahe];
